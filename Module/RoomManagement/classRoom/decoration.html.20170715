@@ -74,7 +74,7 @@
                     <tr ng-repeat="item in listKc">
                         <td>课程</td>
                         <td>{{item.kcxlmc}}</td>
-                        <td>{{item.name}}</td>
+                        <td>课程系列</td>
                         <td><a target="_blank" href="{{item.kctp}}">查看图标</a></td>
                         <td class="pr">
                             <input type="text" ng-model="item.newPath" class="width100 h24"/>
