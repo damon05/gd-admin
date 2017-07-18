@@ -5,7 +5,7 @@
 
 angular.module("app").directive("homeworkList",function(){
     return {
-        templateUrl: "./Directive/homeworkList/homeworkList.html?v=1926",
+        templateUrl: "./Directive/homeworkList/homeworkList.html?v=1333",
         restrict:"EA",
         scope:{
             "chooseCallback":"=",
@@ -31,12 +31,12 @@ angular.module("app").directive("homeworkList",function(){
             }
 
             $scope.createHomework = function(){                
-                $state.go("roomManage.homeworkCreate", { entity: { tag: "add", from: "safe", teachingCode: "20161101205908881NAN2", schoolID: "BJ1001", homeworkType: 1, Type: 0 } });
+                $state.go("roomManage.homeworkCreate", { entity: { tag: "add", from: "safe", teachingCode: "", schoolID: "nlsex", homeworkType: 1, Type: 0 } });
                
             }
 
             $scope.createHomeworkTemplate = function () {
-                $state.go("roomManage.homeworkCreate", { entity: { tag: "add", homeworkType: 0, KCBH: "KC1009", Type: 0} });
+                $state.go("roomManage.homeworkCreate", { entity: { tag: "add", homeworkType: 0, KCBH: "zn100009", Type: 0 } });
                 
             }
 
@@ -56,7 +56,7 @@ angular.module("app").directive("homeworkList",function(){
             }
 
             $scope.publish = function (item) {
-                var alertMessage = "发布后不能再修改作业内容，确定要发布吗？";
+                var alertMessage = "发布后不能再修改考卷内容，确定要发布吗？";
 
                 if (confirm(alertMessage)) {
                     var tmp = {
@@ -70,6 +70,25 @@ angular.module("app").directive("homeworkList",function(){
                     enume.postData(url, tmp, function (d) {                       
                             alert("发布成功!");
                             $scope.$broadcast("searchByFilter");                        
+                    })
+                }
+            };
+
+            $scope.closeHomework = function (item) {
+                var alertMessage = "确定要关闭考卷吗？";
+
+                if (confirm(alertMessage)) {
+                    var tmp = {
+                    };
+                    var url = "";
+
+                    var id = item.ID;
+                    url = srvDomain + "/Homework/CloseHomework";
+                    tmp.id = id;
+
+                    enume.postData(url, tmp, function (d) {
+                        alert("关闭考卷成功!");
+                        $scope.$broadcast("searchByFilter");
                     })
                 }
             };

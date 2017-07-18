@@ -30,7 +30,7 @@ angular.module("app").directive("questionList",function(){
             var selClass = null;
 
             if ($scope.Type == "0") {
-                $scope.TypeName = "作业";
+                $scope.TypeName = "考卷";
             }
             else {
                 $scope.TypeName = "问卷";
@@ -39,7 +39,7 @@ angular.module("app").directive("questionList",function(){
             $scope.getUrl = function () {
                 return srvDomain + "/Question/Index?homeworkID=" + $scope.homeworkID;
             }
-            //查询作业题目列表          
+            //查询考卷题目列表          
             $scope.$broadcast("searchByFilter");
             
 

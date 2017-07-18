@@ -16,14 +16,14 @@ angular.module('app')
         $scope.TypeName = "";
 
         if ($scope.Type == "0") {
-            $scope.TypeName = "作业";
+            $scope.TypeName = "考卷";
         }
         else {
             $scope.TypeName = "问卷";
         }
 
         $scope.data = {
-            current: "1" // 1代表作业基本信息，2代表作业完成信息
+            current: "1" // 1代表考卷基本信息，2代表考卷完成信息
         };
 
         $scope.actions =
@@ -84,7 +84,7 @@ angular.module('app')
         $scope.gotoStepTwo = function () {
             // $state.go("roomManage.homeworkCreate", { entity: { tag: "edit", homeworkID: item.ID, Type: $scope.Type } });
             if ($scope.ID == "") {
-                alert("请先保存作业基本信息！");
+                alert("请先保存考卷基本信息！");
             }
             else {
                 $scope.showQuestion = true;
@@ -111,7 +111,7 @@ angular.module('app')
                 SchoolID: $scope.SchoolID,
                 TeachingCode:$scope.teachingCode,
                 Title: $scope.Title,
-                Type:$scope.Type,//作业0 调查问卷1
+                Type:$scope.Type,//考卷0 调查问卷1
                 HomeworkType: $scope.homeworkType,
                 CourseCode: $scope.KCBH,
                 FinishTime: $scope.FinishTime,

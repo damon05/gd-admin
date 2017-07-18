@@ -21,7 +21,7 @@ angular.module('app')
         $scope.hType = $stateParams.entity.hType;
 
         if ($scope.hType == "0") {
-            $scope.TypeName = "作业";
+            $scope.TypeName = "考卷";
         }
         else {
             $scope.TypeName = "问卷";

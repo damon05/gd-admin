@@ -5,7 +5,7 @@
 
 angular.module("app").directive("selectHomework", function () {
     return {
-        templateUrl: "./Directive/selectHomework/selectHomework.html?v=1933",
+        templateUrl: "./Directive/selectHomework/selectHomework.html?v=1934",
         restrict:"EA",
         scope:{
             "chooseCallback":"=",
@@ -29,7 +29,7 @@ angular.module("app").directive("selectHomework", function () {
             $scope.Type = $stateParams.entity.Type;
 
             if ($scope.Type == "0") {
-                $scope.TypeName = "作业";
+                $scope.TypeName = "考卷";
             }
             else {
                 $scope.TypeName = "问卷";

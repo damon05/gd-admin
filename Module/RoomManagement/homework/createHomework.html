@@ -22,9 +22,9 @@
                 <label>{{TypeName}}编码：{{ID}}</label>
             </div>
         </div>
-        <div class="searchRow clearfix" ng-show="Type==0">
+        <div class="searchRow clearfix" ng-show="homeworkType==0">
             <div class="left">
-                <label ng-show="homeworkType==0">课程编码：{{KCBH}}</label> <label ng-show="homeworkType==1">授课记录编码：{{teachingCode}}</label>              
+                <label>课程编码：{{KCBH}}</label>
             </div>
         </div>
         <div class="searchRow clearfix">
@@ -32,30 +32,7 @@
                 <label>{{TypeName}}标题：</label>
                 <input type="text" maxlength="200" class="width200" ng-model="Title" />
             </div>
-        </div>
-        <div class="searchRow clearfix">
-
-            <div class="left mr15">
-                <label ng-show="Type==0">完成时间：</label><label ng-show="Type==1">结束时间：</label>
-                <input type="date" maxlength="15" class="width200" ng-model="FinishTime" />
-            </div>
-        </div>
-        <div class="searchRow clearfix" style="min-height:100px;" ng-show="Type==0">
-            <div class="left">
-                <label>学豆赠送信息：</label>
-                <table width="300" style="margin-top:5px;">
-                    <thead style="text-align:left">
-                        <tr><th>答对百分比（%）</th><th>赠送学豆数</th></tr>
-                    </thead>
-                    <tbody style="text-align:left">
-                        <tr ng-repeat="item in wxHomeworkScoreRule">
-                            <td>{{item.ScoreBegin}}~{{item.ScoreEnd}}</td>
-                            <td>{{item.StudyBean}}</td>
-                        </tr>                        
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        </div>      
     </div>    
     <question-list ng-show="showQuestion" show-ck="{show:false}" show-add-btn="showButton" from="{val:'safe'}"></question-list>
     <div  style="margin-top:60px;text-align:center;">

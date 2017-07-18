@@ -47,7 +47,7 @@ angular.module('app').factory("enume",function($http,$state,$rootScope){
         this.wxQuestionResType = [{ name: "文本", code: 0 }, { name: "图片", code: 1 }, { name: "音频", code: 2 }, { name: "视频", code: 3 }]; //问题资源类型
         this.wxCourseLevel = [];
         this.NIANJI = [];
-        this.homeworkType = [{ name: "全部", code: -1 }, { name: "作业模板", code: 0 }, { name: "普通作业", code: 1 }];
+        this.homeworkType = [{ name: "全部", code: -1 }, { name: "基础模板", code: 0 }, { name: "普通考卷", code: 1 }];
         this.wxHomeworkScoreRule = [];
 
 
