@@ -390,6 +390,8 @@ angular.module('app')
 
         $scope.key = "";
 
+        $scope.zzdw = "";
+
         for(var i=0;i<12;i++){
             (function(index){
                 jsCoreMethod.fileReader("b"+(index+1),function(d,f){
@@ -423,6 +425,8 @@ angular.module('app')
 
                 $scope.email = d.email;
                 $scope.key = d.key;
+
+                $scope.zzdw = d.zzdw;
 
                 $scope.cStatus = d.cstatus;
                 $scope.bz = d.bz;
@@ -489,7 +493,8 @@ angular.module('app')
                 glyxx : $scope.glyxx,
                 jfrq : new Date($scope.jfrq).format(),
                 email:$scope.email,
-                key:$scope.key
+                key:$scope.key,
+                zzdw:$scope.zzdw
             };
 
             var e = jsCoreMethod.validateEmail($scope.email,"请输入正常的的邮箱!");
