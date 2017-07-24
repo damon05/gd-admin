@@ -14,6 +14,8 @@ angular.module('app')
         $scope.KCBH = $stateParams.entity.KCBH;
         $scope.wxHomeworkScoreRule = enume.wxHomeworkScoreRule;
         $scope.TypeName = "";
+        $scope.wxExamCategory = enume.wxExamCategory;
+        $scope.CategoryID = "";
 
         if ($scope.Type == "0") {
             $scope.TypeName = "考卷";
@@ -49,7 +51,7 @@ angular.module('app')
                 $scope.CreateTime = item.CreateTime;
                 $scope.ModifyBy = item.ModifyBy;
                 $scope.ModifyTime = item.ModifyTime;
-
+                $scope.CategoryID = item.CategoryID;
             })
         }
 
@@ -115,7 +117,8 @@ angular.module('app')
                 HomeworkType: $scope.homeworkType,
                 CourseCode: $scope.KCBH,
                 FinishTime: $scope.FinishTime,
-                Remark: $scope.Remark
+                Remark: $scope.Remark,
+                CategoryID: $scope.CategoryID
             };            
 
             var url = "";
