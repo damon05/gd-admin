@@ -470,7 +470,7 @@ angular.module('app')
                 xxbh:$scope.xxbh,       //学校编号
                 xxmc:$scope.xxmc,       //学校名称
                 jsbh:$scope.xxbh,       //教室编号
-                jsmc:$scope.jsmc,       //教室名称
+                jsmc:$scope.xxmc,       //教室名称
                 jsdz:$scope.jsdz,       //教室地址
                 sqzh:$scope.sqzh,        //授权账号
                 sqmm:$scope.sqmm,       //授权密码
