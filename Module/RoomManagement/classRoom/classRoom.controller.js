@@ -411,7 +411,7 @@ angular.module('app')
             enume.getData("/cmsapi/tclassRegister/detail?tanentId="+tanentId+"&jsbh="+jsbh,function(d){
                 $scope.zhh = d.zhh;
                 $scope.xxbh = d.xxbh;
-                $scope.xxmc = d.xxmc;
+                $scope.xxmc = d.jsmc;
                 $scope.jsbh = d.jsbh;
                 $scope.jsmc = d.jsmc;
                 $scope.jsdz = d.jsdz;
@@ -459,7 +459,7 @@ angular.module('app')
             $scope.showButton = false;
         }
         else{
-            $scope.t_title = "教室注册";
+            $scope.t_title = "培训机构注册";
             $scope.showButton = true;
         }
 
@@ -469,7 +469,7 @@ angular.module('app')
                 zhh:$scope.zhh,         //租户号
                 xxbh:$scope.xxbh,       //学校编号
                 xxmc:$scope.xxmc,       //学校名称
-                jsbh:$scope.jsbh,       //教室编号
+                jsbh:$scope.xxbh,       //教室编号
                 jsmc:$scope.jsmc,       //教室名称
                 jsdz:$scope.jsdz,       //教室地址
                 sqzh:$scope.sqzh,        //授权账号
