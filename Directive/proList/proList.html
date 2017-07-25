@@ -14,7 +14,7 @@
         <select class="width287" ng-model="kcxlsNum" ng-options="m.code as m.name for m in kcxls"></select>
     </div>
     <div class="left">
-        <label>适用教室版本号：</label>
+        <label>适用授课端本号：</label>
         <!--<input type="text" class="width268" ng-model="syjsbbh"/>-->
         <select class="width268" ng-model="syjsbbh" ng-options="m.code as m.name for m in jsVersion"></select>
     </div>
@@ -31,7 +31,7 @@
 
 <div class="mt10">
     <button class="btnGreen ml65" ng-click="seachPros();">查询</button>
-    <button ng-show="showAddBtn.show" class="btnGreen" ng-click="createPro();">创建商品</button>
+    <button ng-show="showAddBtn.show" class="btnGreen" ng-click="createPro();">创建课程</button>
 </div>
 
 <div class="grayLine"></div>
@@ -44,7 +44,7 @@
         <!--<th>商品类别</th>-->
         <th>课程系列名称</th>
         <th>课程名称</th>
-        <th>适用教室版本号</th>
+        <th>适用授课端版本号</th>
         <th>当前版本号</th>
         <!--<th>价格</th>-->
         <th>创建时间</th>

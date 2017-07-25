@@ -447,14 +447,14 @@ angular.module('app')
 
         $scope.showButton = true;
         if($stateParams.entity.tag == "edit"){
-            $scope.t_title = "修改教室";
+            $scope.t_title = "培训机构注册";
             getInfoByCode();
             $scope.showButton = true;
             $scope.showImg = true;
 
         }
         else if($stateParams.entity.tag == "detail"){
-            $scope.t_title = "教室详情";
+            $scope.t_title = "培训机构注册";
             getInfoByCode();
             $scope.showButton = false;
         }

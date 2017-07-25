@@ -1,4 +1,4 @@
-<div class="navigation">我的应用 > 教室管理 > {{t_title}}</div>
+<div class="navigation">我的应用 > 教室管理 > 创建课程</div>
 
 <div class="searchRow clearfix">
     <div class="left mr15" ng-show="false">
@@ -20,7 +20,7 @@
     </div>
 
     <div class="left">
-        <label>适用教室版本号：</label>
+        <label>适用授课端版本号：</label>
         <select class="width140" ng-model="syjsbbh" ng-options="m.code as m.name for m in jsVersion"></select>
     </div>
 
@@ -42,10 +42,10 @@
 
 <div class="searchRow clearfix">
     <div class="left mr15">
-        <label>商品编号：</label>
+        <label>课程编号：</label>
         <input type="text" maxlength="10" placeholder="" class="width140" ng-model="spbh"/>
     </div>
-    <div class="left">
+    <div class="left" ng-show="false">
         <label>课程适用年级：</label>
         <!--<select class="width140" ng-model="kcsynj" ng-options="m.code as m.name for m in NIANJI"></select>-->
         <oo ng-repeat="x in NIANJI">
@@ -53,14 +53,14 @@
         </oo>
     </div>
     <div class="left">
-        <label class="ml40">商品名称：</label>
+        <label class="ml40">课程名称：</label>
         <input type="text" maxlength="60" placeholder="" class="width268" ng-model="ssmc"/>
     </div>
 </div>
 
 <div class="searchRow clearfix">
     <div class="left mr15 lh32">
-        <label>商品状态：</label>
+        <label>课程状态：</label>
         <span><input type="radio" name="prostatus" value="down" ng-model="proStatus" /><span>下架</span></span>
         <span><input type="radio" name="prostatus" value="up" ng-model="proStatus" /><span>上架</span></span>
     </div>
@@ -72,21 +72,21 @@
 
 <div class="searchRow clearfix height100">
     <div class="left mr15">
-        <label class="left">商品简介：</label>
+        <label class="left">课程简介：</label>
         <textarea maxlength="1000" ng-model="spjj" style="width: 826px;height: 100px;float: left"></textarea>
     </div>
 </div>
 
 <div class="searchRow clearfix height100">
     <div class="left mr15">
-        <label class="left">商品内容：</label>
+        <label class="left">课程内容：</label>
         <textarea maxlength="1000" ng-model="spnr" style="width: 826px;height: 100px;float: left"></textarea>
     </div>
 </div>
 
 <div class="searchRow clearfix">
     <div class="left mr15">
-        <label style="margin-left: 7px;">商品缩略图：</label>
+        <label style="margin-left: 7px;">课程缩略图：</label>
         <button class="nextBtn mr15" style="position: relative" id="btn1">
             上传文件
             <input type="file" class="inputFile"/>
@@ -178,7 +178,7 @@
 
 <div class="searchRow clearfix">
     <div class="left mr15">
-        <label style="margin-left: 86px;">课程标准：</label>
+        <label>课程标准：</label>
         <button class="nextBtn mr15" style="position: relative;" id="btn3">
             上传文件
             <input type="file" class="inputFile" name="file"/>
@@ -192,7 +192,7 @@
 
 <div class="searchRow clearfix">
     <div class="left mr15">
-        <label style="margin-left: 115px;">教案：</label>
+        <label>教案：</label>
         <button class="nextBtn mr15" style="position: relative" id="btn4">
             上传文件
             <input type="file" class="inputFile" name="file"/>
@@ -206,7 +206,7 @@
 
 <div class="searchRow clearfix">
     <div class="left mr15">
-        <label style="margin-left: 87px;">课程教材：</label>
+        <label >课程教材：</label>
         <button class="nextBtn mr15" style="position: relative" id="btn5">
             上传文件
             <input type="file" class="inputFile" name="file"/>
@@ -234,7 +234,7 @@
 
 <div class="searchRow clearfix">
     <div class="left mr15">
-        <label style="margin-left: 17px;">教具使用说明及清单：</label>
+        <label>教具使用说明及清单：</label>
         <button class="nextBtn mr15" style="position: relative" id="btn7">
             上传文件
             <input type="file" class="inputFile" name="file"/>
@@ -248,7 +248,7 @@
 
 <div class="searchRow clearfix">
     <div class="left mr15">
-        <label style="margin-left: 86px;">课程素材：</label>
+        <label >课程素材：</label>
         <button class="nextBtn mr15" style="position: relative" id="btn8">
             上传文件
             <input type="file" class="inputFile" name="file"/>
@@ -262,7 +262,7 @@
 
 <div class="searchRow clearfix">
     <div class="left mr15">
-        <label style="margin-left: 115px;">题库：</label>
+        <label>题库：</label>
         <button class="nextBtn mr15" style="position: relative" id="btn9">
             上传文件
             <input type="file" class="inputFile" name="file"/>

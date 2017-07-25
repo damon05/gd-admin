@@ -1,4 +1,4 @@
-<div class="navigation">我的应用 > 人员管理 > {{t_title}}</div>
+<div class="navigation">我的应用 > 人员管理 > 培训机构注册</div>
 
 
 <div>
@@ -9,31 +9,31 @@
         </div>
 
         <div class="left mr15">
-            <label>学校编号：</label>
+            <label>培训机构编号：</label>
             <input type="text" maxlength="10" class="width200" ng-model="xxbh"/>
         </div>
 
         <div class="left">
-            <label>学校名称：</label>
+            <label>培训机构名称：</label>
             <input type="text" maxlength="60" class="width200" ng-model="xxmc"/>
         </div>
     </div>
 
-    <div class="searchRow clearfix">
-        <div class="left mr15">
+    <div class="searchRow clearfix" ng-show="false">
+        <div class="left mr15" ng-show="false">
             <label class="ml14">教室编号：</label>
             <input type="text" maxlength="20" class="width200" ng-model="jsbh"/>
         </div>
 
-        <div class="left mr15">
+        <div class="left mr15" ng-show="false">
             <label>教室名称：</label>
             <input type="text" maxlength="50" class="width200" ng-model="jsmc"/>
         </div>
 
-        <div class="left">
-            <label>安装地址：</label>
-            <input type="text" maxlength="50" class="width200" ng-model="jsdz"/>
-        </div>
+        <!--<div class="left">-->
+            <!--<label>培训机构地址：</label>-->
+            <!--<input type="text" maxlength="50" class="width200" ng-model="jsdz"/>-->
+        <!--</div>-->
     </div>
 
     <div class="searchRow clearfix">
@@ -56,11 +56,11 @@
 
     <div class="searchRow">
         <div class="left mr15">
-            <label>教室版本号：</label>
+            <label>讲课端本号：</label>
             <select class="width200" ng-model="jsbbh" ng-options="m.code as m.name for m in jsVersion"></select>
         </div>
         <div class="left mr15">
-            <label>校长姓名：</label>
+            <label>负责人姓名：</label>
             <input type="text" maxlength="20" class="width200" ng-model="xzxm"/>
         </div>
         <div class="left mr15">
@@ -85,6 +85,10 @@
         </div>
     </div>
     <div class="searchRow clearfix">
+        <div class="left">
+            <label>培训机构地址：</label>
+            <input type="text" maxlength="50" class="width200" ng-model="jsdz"/>
+        </div>
         <div class="left mr15">
             <label>制证单位：</label>
             <input type="text" maxlength="100" class="width200" ng-model="zzdw"/>
